@@ -1,0 +1,23 @@
+﻿@using ASPNetCore.EF.Models;
+@model IEnumerable<Customer>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<table class="table">
+    <tr>
+        <th>CustomerID</th>
+        <th>ContactName</th>
+        <th>City</th>
+        <th>Country</th>
+    </tr>
+    @foreach (Customer customer in Model)
+    {
+        <tr>
+            <td>@customer.CustomerId</td>
+            <td>@customer.Name</td>
+            <td>@customer.Country</td>
+            <td>@customer.Designation</td>
+        </tr>
+    }
+</table>
